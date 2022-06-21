@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
+import Homepage from './Homepage';
+
+//using react router
 import { Routes, Route } from 'react-router-dom';
+
 
 /*
 
@@ -15,11 +19,11 @@ function App() {
   return (
     <div className="App">
       <Routes>
-          <Route path='/' element={<h1>amazon clone !</h1>} />
-          <Route path='/checkout' element={<h1>Checkout page</h1>}/>
-          <Route path='/login' element={<h1>Login page</h1>}/>
+        <Route path='/' element={<Homepage/>} />
+        <Route path='/checkout/' element={<h1>Checkout page</h1>} />
+        <Route path='/login' element={<h1>Login page</h1>} />
       </Routes>
-      
+
     </div>
   );
 }
