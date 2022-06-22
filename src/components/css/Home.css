@@ -1,3 +1,10 @@
+.home {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .home__image{
     width: 100%;
     /* it's like create a layer on the image */

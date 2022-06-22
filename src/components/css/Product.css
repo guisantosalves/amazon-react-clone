@@ -1,0 +1,11 @@
+.product__rating{
+    display: flex;
+}
+
+.product__star{
+    color: #f4c430 !important;
+}
+
+.product {
+    display: flex;
+}
