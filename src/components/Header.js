@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/Header.css";
 import { Search } from "@mui/icons-material";
+import { ShoppingBasket } from "@mui/icons-material";
 
 //using react router
 import { Link } from "react-router-dom";
@@ -24,16 +25,41 @@ function Header() {
         <Search className="header__searchIcon" />
       </div>
 
-      {/* 3 links */}
+      {/* 4 links */}
       <div className="header__nav">
         {/* 1 link */}
-        <Link>
-
+        <Link to="/login" className="header__link">
+            <div className="header__option">
+                <span className="header__optionLineOne">Hello gui</span>
+                <span className="header__optionLineTwo">Sign In</span>
+            </div>
         </Link>
 
         {/* 2 link */}
+        <Link to="/login" className="header__link">
+            <div className="header__option">
+                <span className="header__optionLineOne">Returns</span>
+                <span className="header__optionLineTwo">& Orders</span>
+            </div>
+        </Link>
+
         {/* 3 link */}
+        <Link to="/login" className="header__link">
+            <div className="header__option">
+                <span className="header__optionLineOne">Your</span>
+                <span className="header__optionLineTwo">Prime</span>
+            </div>
+        </Link>
+
         {/* 4 link */}
+        <Link to="/checkout" className="header__link">
+            <div className="header__optionBasket">
+                {/* shopping basket and the number of item */}
+                <ShoppingBasket />
+                <span className="header__optionLineTwo header__basketCount">0</span>
+            </div>
+        </Link>
+
       </div>
 
       {/* basket icon with number */}
