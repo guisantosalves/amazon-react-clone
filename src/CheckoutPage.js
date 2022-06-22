@@ -1,15 +1,13 @@
 import React from "react";
 import Header from "./components/Header";
-import Home from "./components/Home";
 
-function Homepage(){
+function CheckoutPage(){
     return(
         <>
             <Header/>
-            <Home/>
-
+            <h1>check out</h1>
         </>
     )
 }
 
-export default Homepage;
+export default CheckoutPage
