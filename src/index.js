@@ -30,7 +30,21 @@ const reducer = (state, action) =>
 
     case "REMOVE_FROM_BASKET":
 
-      
+      let newBasket = [...state.basket]
+      //it's gonna return something >= 0 if find
+      const index = state.basket.findIndex((basketItems)=>basketItems.id === action.id);
+
+      if(index >= 0){
+        //get the index where is the product and remove it
+        newBasket.splice(index, 1);
+
+      }else{
+        console.warn(`can't remove product (id: ${action.id})`)
+      }
+
+      return{
+        ...state
+      }
       break;
 
     default:
