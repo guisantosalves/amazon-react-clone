@@ -40,10 +40,11 @@ const reducer = (state, action) =>
 
       }else{
         console.warn(`can't remove product (id: ${action.id})`)
+        
       }
 
       return{
-        ...state
+        ...state, basket: newBasket
       }
       break;
 
