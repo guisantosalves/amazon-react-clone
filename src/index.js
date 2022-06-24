@@ -8,21 +8,29 @@ import { StateProvider } from "./components/StateProvide";
 
 //using reducer
 export const inititalState = {
-  basket: ["guizao", "dozap"],
+  basket: [],
+  user: null,
 };
 
-function reducer(state, action) 
+const reducer = (state, action) => 
 {
+  console.log(action)
   switch(action.type){
 
     case "ADD_TO_BASKET":
 
-      //adding the basket
+        
+      return {
+        ...state,
+        //we need keep the state from basket then add the new item
+        basket: [...state.basket, action.item],
+      }
+
       break;
 
     case "REMOVE_FROM_BASKET":
 
-      //removing the item from the basket
+      
       break;
 
     default:
