@@ -1,15 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { StateProvider } from "./components/StateProvide";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//using reducer
+export const inititalState = {
+  basket: ["guizao", "dozap"],
+};
+
+function reducer(state, action) 
+{
+  switch(action.type){
+
+    case "ADD_TO_BASKET":
+
+      //adding the basket
+      break;
+
+    case "REMOVE_FROM_BASKET":
+
+      //removing the item from the basket
+      break;
+
+    default:
+      return state; 
+  }
+}
+
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <StateProvider inititalState={inititalState} reducer={reducer}>
+        <App />
+      </StateProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

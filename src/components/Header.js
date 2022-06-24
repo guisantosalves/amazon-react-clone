@@ -6,8 +6,16 @@ import { ShoppingBasket } from "@mui/icons-material";
 //using react router
 import { Link } from "react-router-dom";
 
+
+//using the dataLayer
+import { useStateValue } from "./StateProvide";
+
+
 //when we use href the page will refresh
 function Header() {
+
+  const [{basket}, dispatch] = useStateValue();
+  
   return (
     <nav className="header">
       {/* logo -> img */}
@@ -56,7 +64,7 @@ function Header() {
             <div className="header__optionBasket">
                 {/* shopping basket and the number of item */}
                 <ShoppingBasket />
-                <span className="header__optionLineTwo header__basketCount">0</span>
+                <span className="header__optionLineTwo header__basketCount">{basket.length}</span>
             </div>
         </Link>
 

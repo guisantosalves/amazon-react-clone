@@ -53,7 +53,7 @@ function Home() {
         />
       </div>
 
-      <div className="home__row exemplo">
+      <div className="home__row">
       <Product
           id="2131312"
           tittle="moLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text everuse"
