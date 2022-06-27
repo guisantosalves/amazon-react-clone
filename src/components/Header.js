@@ -20,7 +20,7 @@ function Header() {
   return (
     <nav className="header">
       {/* logo -> img */}
-      <Link to="/login">
+      <Link to="/">
         <img
           className="header__logo"
           src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
@@ -37,7 +37,7 @@ function Header() {
       {/* 4 links */}
       <div className="header__nav">
         {/* 1 link */}
-        <Link to="/login" className="header__link">
+        <Link to="/" className="header__link">
             <div className="header__option">
                 <span className="header__optionLineOne">Hello gui</span>
                 <span className="header__optionLineTwo">Sign In</span>
@@ -45,7 +45,7 @@ function Header() {
         </Link>
 
         {/* 2 link */}
-        <Link to="/login" className="header__link">
+        <Link to="/" className="header__link">
             <div className="header__option">
                 <span className="header__optionLineOne">Returns</span>
                 <span className="header__optionLineTwo">& Orders</span>
@@ -53,7 +53,7 @@ function Header() {
         </Link>
 
         {/* 3 link */}
-        <Link to="/login" className="header__link">
+        <Link to="/" className="header__link">
             <div className="header__option">
                 <span className="header__optionLineOne">Your</span>
                 <span className="header__optionLineTwo">Prime</span>
